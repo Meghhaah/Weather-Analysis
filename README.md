@@ -7,10 +7,19 @@ This project analyzes temperature records and visualizes weather station data in
 - **`temperature.csv`**: Contains temperature data from various weather stations in Ann Arbor over multiple years.
 - **`BinSize.csv`**: Contains global weather station data with location coordinates.
 
+---
+
 ## Key Considerations
 - Each row in the dataset represents a single observation.
 - Leap days (February 29th) are removed for consistent visual representation.
 - Visualizations include proper legends, labels, and minimal clutter for clarity.
+
+---
+
+## Visualization Considerations
+- Clarity: Avoid overcrowding, use appropriate labels and legends.
+- Consistency: Ensure uniform data formatting and color schemes.
+- Relevance: Only display meaningful information to enhance interpretation.
 
 ---
 
@@ -64,13 +73,6 @@ This project analyzes temperature records and visualizes weather station data in
 ---
 
 ### Note : Both dataset has been cleaned , organaised and sorted for relevance , the code for which can be found in  "Data Preprocessing.ipynb" file inside Data Preprocessing folder.
-
----
-
-## Visualization Considerations
-- Clarity: Avoid overcrowding, use appropriate labels and legends.
-- Consistency: Ensure uniform data formatting and color schemes.
-- Relevance: Only display meaningful information to enhance interpretation.
 
 ---
 

@@ -2,7 +2,7 @@
 
 This project analyzes temperature records and visualizes weather station data in the vicinity of Ann Arbor, Michigan, USA. The goal is to explore historical temperature trends, identify record-breaking events, and map weather station locations for better geographical insights.
 
-## Datasets Used
+## Datasets Used 
 
 - **`temperature.csv`**: Contains temperature data from various weather stations in Ann Arbor over multiple years.
 - **`BinSize.csv`**: Contains global weather station data with location coordinates.
@@ -63,7 +63,7 @@ This project analyzes temperature records and visualizes weather station data in
 
 ---
 
-### Note : Both dataset has been cleaned , organaised and sorted for relevance , the code for which can be found in  "Data Preprocessing.ipynb" file
+### Note : Both dataset has been cleaned , organaised and sorted for relevance , the code for which can be found in  "Data Preprocessing.ipynb" file inside Data Preprocessing folder.
 
 ---
 

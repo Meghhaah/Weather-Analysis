@@ -1,42 +1,100 @@
-# Weather Analysis: Temperature Trends & Weather Patterns near Ann Arbor, Michigan, United States
+# Temperature and Weather Station Data Analysis Near Ann Arbor, Michigan, USA
 
-## Overview
-This project presents a comprehensive analysis of weather patterns near Ann Arbor, Michigan, using historical data and 2015 observations. The study examines temperature trends, weather station distribution, and seasonal variations to identify potential climate change patterns.
+This project analyzes temperature records and visualizes weather station data in the vicinity of Ann Arbor, Michigan, USA. The goal is to explore historical temperature trends, identify record-breaking events, and map weather station locations for better geographical insights.
 
-## 1. Historical Temperature Trends (2005–2014) with 2015 Overlay
-- **Objective:** Analyze historical daily high/low temperatures and identify record-breaking events in 2015.
-- **Key Insights:**
-  - **Temperature Range:** Historical daily highs (red) and lows (blue) with shaded regions indicating historical norms.
-  - **Record-Breaking Events (2015):**
-    - *Yellow Dots*: Record low temperatures, mainly in winter.
-    - *Green Dots*: Record high temperatures, primarily in late summer and fall.
-  - **Climate Implications:**
-    - Increased winter cold spells alongside new summer heat records suggest growing climate variability.
+## Datasets Used
 
-## 2. Weather Station Distribution
-- **Objective:** Visualize weather stations in the region.
-- **Key Insights:**
-  - Weather stations are strategically placed across diverse terrains, ensuring comprehensive data collection.
-  - High-density station clusters near urban centers enhance climate monitoring.
+- **`temperature.csv`**: Contains temperature data from various weather stations in Ann Arbor over multiple years.
+- **`BinSize.csv`**: Contains global weather station data with location coordinates.
 
-## 3. Temperature Summary for 2015
-- **Objective:** Analyze daily minimum, mean, and maximum temperatures for 2015.
-- **Key Insights:**
-  - Seasonal temperature trends align with historical patterns but show increased variability.
-  - **Winter:** Harsh lows with frequent cold spells.
-  - **Summer:** New heat records with rising peak temperatures.
-  - **Spring/Autumn:** Noticeable fluctuations during seasonal transitions.
+## Key Considerations
+- Each row in the dataset represents a single observation.
+- Leap days (February 29th) are removed for consistent visual representation.
+- Visualizations include proper legends, labels, and minimal clutter for clarity.
 
-## 4. Climate Change Context
-- **Observations:**
-  - Increased temperature variability with simultaneous record highs and lows in 2015.
-  - Trends indicate potential seasonal shifts, with winters becoming colder and summers warmer.
+---
+
+## Project Tasks and Implementation
+
+### 1. Record High and Low Temperatures (2005-2014)
+- Extract temperature data from 2005-2014.
+- Remove leap days and handle missing values.
+- Aggregate daily record highs and lows over the 10-year period.
+- Plot high/low temperature trends with a shaded region in between.
+
+### 2. Overlay 2015 Record-Breaking Temperatures
+- Identify days in 2015 where temperatures broke previous records.
+- Overlay record-breaking points on the temperature visualization.
+
+### 3. Weather Station Mapping Near Ann Arbor
+- Filter relevant weather stations from `BinSize.csv` that exist in `temperature.csv`.
+- Compute distances from Ann Arbor's coordinates.
+- Keep stations within a 100 km radius.
+- Plot weather stations using latitude and longitude on a map.
+
+### 4. Temperature Summary (2015)
+- Extract 2015 data from `temperature.csv` for Ann Arbor.
+- Summarize and visualize temperature trends for the year.
+
+---
+
+## Logical Implementation Approach
+
+### Tasks 1 and 2 (Temperature Analysis)
+1. Data Cleaning: Remove leap days and ensure data consistency.
+2. Aggregation: Compute record highs and lows per day (2005-2014).
+3. Overlay 2015 Data: Identify and mark new records.
+4. Visualization:
+   - Plot high and low records as a shaded graph.
+   - Overlay record-breaking 2015 temperatures as scatter points.
+   - Add legends, labels, and ensure clarity.
+   ### Code and Analysis report can be found in "Tasks 1 & 2.ipynb" file
+
+### Tasks 3 and 4 (Weather Station and 2015 Summary) 
+1. Data Filtering:
+   - Remove unnecessary columns.
+   - Filter relevant weather stations from `BinSize.csv`.
+2. Geospatial Filtering:
+   - Compute distances from Ann Arbor.
+   - Keep only stations within 100 km.
+3. Weather Station Map: Plot locations using latitude and longitude.
+4. Temperature Summary (2015): Visualize temperature trends for Ann Arbor.
+### Code and Analysis report can be found in "Tasks 3 & 4.ipynb" file
+
+---
+
+## Visualization Considerations
+- Clarity: Avoid overcrowding, use appropriate labels and legends.
+- Consistency: Ensure uniform data formatting and color schemes.
+- Relevance: Only display meaningful information to enhance interpretation.
+
+---
 
 ## Conclusion
-The analysis reveals significant climate variability, with 2015 showcasing both record-breaking heat and cold events. These findings align with broader patterns of climate change, indicating a potential shift in seasonal weather patterns.
 
+The analysis reveals significant climate variability, with 2015 showcasing both record-breaking heat and cold events. These findings align with broader patterns of climate change, indicating a potential shift in seasonal weather patterns. 
 
+---
 
+## Technologies and Modules Used
 
+### 1. Standard Python Modules (No installation required)
+- **os**: File and directory path manipulation.
+- **datetime**: Parsing, formatting, and manipulating date/time data.
 
+### 2. Third-Party Modules (Require installation via `pip`)
+- **pandas**: Data manipulation and CSV handling.
+- **matplotlib.pyplot**: Data visualization (line plots, scatter plots, maps).
+- **numpy**: Numerical operations and handling NaN values.
+- **geopy.distance.geodesic**: Geographic distance calculations (e.g., filtering stations within 100 km).
+
+### 3. Additional Geographic Modules 
+- **contextily (ctx)**: Adds basemaps (e.g., OpenStreetMap) to geographic plots.
+- **geopandas**: Geographic data manipulation and handling.
+- **shapely.geometry.Point**: Creating geometric points from latitude/longitude coordinates.
+
+### Installation Guide
+Run the following command to install all required libraries:
+```sh
+pip install pandas matplotlib numpy contextily geopandas shapely geopy
 

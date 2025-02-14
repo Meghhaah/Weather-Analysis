@@ -23,27 +23,15 @@ This project analyzes temperature records and visualizes weather station data in
 
 ---
 
-## Project Tasks and Implementation
+## Project Tasks 
 
-### 1. Record High and Low Temperatures (2005-2014)
-- Extract temperature data from 2005-2014.
-- Remove leap days and handle missing values.
-- Aggregate daily record highs and lows over the 10-year period.
-- Plot high/low temperature trends with a shaded region in between.
+### 1. Plot record high and low temperatures by day (2005-2014) with shaded areas in between.
 
-### 2. Overlay 2015 Record-Breaking Temperatures
-- Identify days in 2015 where temperatures broke previous records.
-- Overlay record-breaking points on the temperature visualization.
+### 2. Overlay 2015 data points for days when record temperatures were broken.
 
-### 3. Weather Station Mapping Near Ann Arbor
-- Filter relevant weather stations from `BinSize.csv` that exist in `temperature.csv`.
-- Compute distances from Ann Arbor's coordinates.
-- Keep stations within a 100 km radius.
-- Plot weather stations using latitude and longitude on a map.
+### 3. Visualize weather stations near Ann Arbor on a map using coordinates.
 
-### 4. Temperature Summary (2015)
-- Extract 2015 data from `temperature.csv` for Ann Arbor.
-- Summarize and visualize temperature trends for the year.
+### 4. Plot a summary of temperature data near Ann Arbor for the year 2015.
 
 ---
 

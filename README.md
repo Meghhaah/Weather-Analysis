@@ -61,6 +61,8 @@ This project analyzes temperature records and visualizes weather station data in
 4. Temperature Summary (2015): Visualize temperature trends for Ann Arbor.
 ### Code and Analysis report can be found in "Tasks 3 & 4.ipynb" file
 
+### Note : Both dataset has been cleaned , organaised and sorted for relevance , the code for which can be found in  "Data Preprocessing.ipynb" file
+
 ---
 
 ## Visualization Considerations
